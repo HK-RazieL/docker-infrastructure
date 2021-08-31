@@ -26,14 +26,12 @@ function App() {
           <tbody>
             {data?.map((el, i) => {
               return (
-                <div>
-                  <tr key={i}>
-                    <td>{el.first_name}</td>
-                    <td>{el.last_name}</td>
-                    <td>{el.department}</td>
-                    <td>{el.email}</td>
-                  </tr>
-                </div>)
+                <tr key={i}>
+                  <td>{el.first_name}</td>
+                  <td>{el.last_name}</td>
+                  <td>{el.department}</td>
+                  <td>{el.email}</td>
+                </tr>)
             })}
           </tbody>
         </table>
