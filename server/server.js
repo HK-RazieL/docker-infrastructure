@@ -1,3 +1,5 @@
+"use strict"
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const mysql = require("mysql2");
@@ -13,9 +15,9 @@ var corsOptions = {
 var pool = mysql.createPool({
     connectionLimit: 10,
     host: 'docker-db',
-    user: 'root',
+    user: process.env.DB_USER,
     port: "3306",
-    password: '1234',
+    password: process.env.DB_PASS,
     database: 'test_company',
 });
 
